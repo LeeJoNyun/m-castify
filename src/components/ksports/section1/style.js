@@ -1,11 +1,10 @@
 import styled from 'styled-components';
 
 export const KsportsStyle = styled.div`
-    font-family: 'Arial', sans-serif;
     width: 725px;
     height: auto;
     margin: 0 auto;
-    padding-top: 40px;
+    padding-top: 80px;
     background-color: #1a1a1a;
     .inner {
         width: 100%;
