@@ -2,10 +2,12 @@ import { useDispatch, useSelector } from 'react-redux';
 import { HeaderStyle } from './style';
 import Menu from './Menu';
 import { headerActions } from '../../store/modules/headerSlice';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
+import Login from '../../components/auth/Login';
 
 const Header = () => {
-    const { menuState } = useSelector((state) => state.header);
+    const { menuState, loginPopup } = useSelector((state) => state.header);
+
     const dispatch = useDispatch();
     const clickGnb = () => {
         dispatch(headerActions.setMenuState());
@@ -44,7 +46,12 @@ const Header = () => {
                     <h2 className="logo">
                         <img src="/logo.png" alt="" />
                     </h2>
-                    <i className="mypage">
+                    <i
+                        className="mypage"
+                        onClick={() => {
+                            dispatch(headerActions.setLoginPopup());
+                        }}
+                    >
                         <svg
                             xmlns="http://www.w3.org/2000/svg"
                             width="20"
@@ -61,6 +68,7 @@ const Header = () => {
                 </div>
             </HeaderStyle>
             {menuState && <Menu />}
+            {loginPopup && <Login />}
         </>
     );
 };
