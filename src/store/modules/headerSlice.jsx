@@ -1,6 +1,8 @@
 import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     menuState: false,
+    loginPopup: false,
+    joinPopup: false,
 };
 
 const headerSlice = createSlice({
@@ -9,6 +11,12 @@ const headerSlice = createSlice({
     reducers: {
         setMenuState: (state, action) => {
             state.menuState = !state.menuState;
+        },
+        setLoginPopup: (state) => {
+            state.loginPopup = !state.loginPopup;
+        },
+        setJoinPopup: (state) => {
+            state.joinPopup = !state.joinPopup;
         },
     },
 });
