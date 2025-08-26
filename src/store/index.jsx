@@ -5,5 +5,4 @@ const store = configureStore({
         header,
     },
 });
-
 export default store;
