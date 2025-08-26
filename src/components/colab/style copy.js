@@ -16,6 +16,15 @@ export const Section1Style = styled.section`
             color: #fff !important;
             padding: 0 9.9237vw;
             box-sizing: border-box;
+            opacity: 0;
+            transform: translateY(30px);
+            transition: all 0.8s ease-out;
+
+            &.fade-in {
+                opacity: 1 !important;
+                transform: translateY(0) !important;
+            }
+
             h2 {
                 font-weight: 700;
                 font-size: 1.25rem;
@@ -27,15 +36,24 @@ export const Section1Style = styled.section`
             }
         }
     }
+
     .product-wrap {
         display: flex;
         gap: 6.1069vw;
         justify-content: center;
         margin-bottom: 5.3474vh;
+        opacity: 0;
+        transform: translateY(30px);
+        transition: all 0.8s ease-out;
+
+        &.fade-in {
+            opacity: 1 !important;
+            transform: translateY(0) !important;
+        }
+
         li {
             width: 15.2672vw;
             .img-bg {
-                /* height: 10.7981vh; */
                 height: 23.4097vw;
                 background: #fff;
                 border-radius: 1.5267vw;
@@ -48,30 +66,26 @@ export const Section1Style = styled.section`
             }
             .text {
                 color: #fff;
-                /* height: 2.3474vh; */
                 height: 5.0891vw;
                 font-size: 0.5rem;
                 padding: 1.4085vh 1.0178vw;
                 box-sizing: border-box;
                 text-overflow: ellipsis;
                 white-space: nowrap;
+
                 h4 {
                     display: -webkit-box;
                     -webkit-box-orient: vertical;
                     -webkit-line-clamp: 2;
-
                     overflow: hidden;
                     text-overflow: ellipsis;
                     white-space: normal;
-
                     margin-bottom: 0.4695vh;
-                }
-
-                span {
                 }
             }
         }
     }
+
     button {
         border: 1px solid #fff;
         border-radius: 3.125rem;
@@ -80,8 +94,7 @@ export const Section1Style = styled.section`
         background: #1a1a1a;
         color: #fff;
         display: block;
-        margin: 0 auto;
-        margin-bottom: 4.6948vh;
+        margin: 0 auto 4.6948vh;
     }
 `;
 
@@ -112,6 +125,7 @@ export const Section2Style = styled.section`
             gap: 2.3474vh 1.5267vw;
             padding: 3.4351vw;
             box-sizing: border-box;
+
             li {
                 width: 45.8015vw;
                 height: 12.7226vw;
@@ -126,6 +140,7 @@ export const Section2Style = styled.section`
                 background-repeat: no-repeat;
                 background-position: 50% 50%;
                 background-size: cover;
+
                 &:nth-child(1) {
                     background-image: url('../images/colab/animation.png');
                 }
@@ -151,7 +166,6 @@ export const Section2Style = styled.section`
 
 export const Section3Style = styled.section`
     width: 93.1298vw;
-    /* height: 10.5634vh; */
     height: 22.9008vw;
     background: #fff;
     border-radius: 0.625rem;
@@ -162,6 +176,7 @@ export const Section3Style = styled.section`
     .colab-all {
         display: flex;
         height: 22.9008vw;
+
         .more {
             width: 50%;
             height: 100%;
@@ -173,6 +188,7 @@ export const Section3Style = styled.section`
             flex-direction: column;
             text-align: center;
             justify-content: center;
+
             h4 {
                 font-size: 1rem;
                 font-weight: 600;
@@ -181,6 +197,7 @@ export const Section3Style = styled.section`
                 font-size: 0.5rem;
             }
         }
+
         .colab-archieve {
             background-image: url('../images/colab/chillguy.jpg');
         }
