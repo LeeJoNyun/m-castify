@@ -16,6 +16,8 @@ export const Section1Style = styled.section`
             color: #fff !important;
             padding: 0 9.9237vw;
             box-sizing: border-box;
+            /* transform: translateY(30px); */
+            transform: translateY(7.6336vw);
             h2 {
                 font-weight: 700;
                 font-size: 1.25rem;
@@ -32,6 +34,7 @@ export const Section1Style = styled.section`
         gap: 6.1069vw;
         justify-content: center;
         margin-bottom: 5.3474vh;
+        transform: translateY(-5.6336vw);
         li {
             width: 15.2672vw;
             .img-bg {

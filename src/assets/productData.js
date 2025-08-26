@@ -1,6 +1,6 @@
 export default [
     {
-        id: apple,
+        id: 'apple',
         product: [
             {
                 id: 1,
@@ -55,7 +55,7 @@ export default [
         ],
     },
     {
-        id: samsung,
+        id: 'samsung',
         product: [
             {
                 id: 1,
