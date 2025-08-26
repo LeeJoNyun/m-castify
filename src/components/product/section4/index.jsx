@@ -20,10 +20,6 @@ const Section4 = () => {
                     </li>
                 </ul>
             </div>
-            <div className="text">
-                <strong>No right answer.</strong>
-                <strong>Just your own way.</strong>
-            </div>
         </Section4Style>
     );
 };

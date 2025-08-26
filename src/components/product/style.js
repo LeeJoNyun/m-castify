@@ -103,7 +103,15 @@ export const Section2Style = styled.section`
     }
 `;
 
-export const Section3Style = styled.section``;
+export const Section3Style = styled.section`
+    p {
+        font-size: 0.75rem;
+        font-weight: 600;
+        color: rgba(255, 255, 255, 0.8);
+        margin-top: 10.1781vw;
+        margin-bottom: 7.6336vw;
+    }
+`;
 
 export const Section4Style = styled.section`
     width: 80.1527vw;
@@ -111,21 +119,30 @@ export const Section4Style = styled.section`
     .series {
         .series-text {
             p {
+                font-size: 0.875rem;
+                font-weight: 600;
+                color: #fff;
+                text-align: center;
+                margin-bottom: 5.0891vw;
             }
         }
         .series-img {
             display: flex;
-            border-radius: 10vw;
+            border-radius: 1.25vw;
             height: 22.9008vw;
+            overflow: hidden;
+
             li {
                 width: 26.7176vw;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                flex-direction: column;
+                text-align: center;
                 span {
                     font-weight: 700;
                     font-size: 1rem;
                     color: #fff;
-                    display: flex;
-                    justify-content: center;
-                    /* align-items: center; */
                 }
             }
             .impact {
