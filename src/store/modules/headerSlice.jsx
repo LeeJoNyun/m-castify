@@ -2,6 +2,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const initialState = {
     menuState: false,
     loginPopup: false,
+    joinPopup: false,
 };
 
 const headerSlice = createSlice({
@@ -13,6 +14,9 @@ const headerSlice = createSlice({
         },
         setLoginPopup: (state) => {
             state.loginPopup = !state.loginPopup;
+        },
+        setJoinPopup: (state) => {
+            state.joinPopup = !state.joinPopup;
         },
     },
 });

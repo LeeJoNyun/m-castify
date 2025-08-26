@@ -4,9 +4,10 @@ import Menu from './Menu';
 import { headerActions } from '../../store/modules/headerSlice';
 import { useEffect, useState } from 'react';
 import Login from '../../components/auth/Login';
+import Join from '../../components/auth/Join';
 
 const Header = () => {
-    const { menuState, loginPopup } = useSelector((state) => state.header);
+    const { menuState, loginPopup, joinPopup } = useSelector((state) => state.header);
 
     const dispatch = useDispatch();
     const clickGnb = () => {
@@ -69,6 +70,7 @@ const Header = () => {
             </HeaderStyle>
             {menuState && <Menu />}
             {loginPopup && <Login />}
+            {joinPopup && <Join />}
         </>
     );
 };
