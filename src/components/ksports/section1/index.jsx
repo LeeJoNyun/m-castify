@@ -1,9 +1,9 @@
 import React from 'react';
-import { KsportsStyle } from './style';
+import { Section1Style } from './style';
 
-const ksports = () => {
+const section1 = () => {
     return (
-        <KsportsStyle>
+        <Section1Style>
             <div className="inner">
                 <span>K - SPORTS</span>
                 <h2>KBO x 케이스티파이</h2>
@@ -31,8 +31,8 @@ const ksports = () => {
                     유니폼과 로고로 디자인된 케이스로 팬심을 표현해보세요.
                 </p>
             </div>
-        </KsportsStyle>
+        </Section1Style>
     );
 };
 
-export default ksports;
+export default section1;

@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
-export const KsportsStyle = styled.div`
-    width: 725px;
+export const Section1Style = styled.div`
+    width: 383px;
     height: auto;
     margin: 0 auto;
     padding-top: 80px;

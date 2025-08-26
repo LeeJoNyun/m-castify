@@ -1,9 +1,10 @@
-import { Section1 } from '../../components/ksports';
+import { Section1, Section2 } from '../../components/ksports';
 
 const index = () => {
     return (
         <>
             <Section1 />
+            <Section2 />
         </>
     );
 };

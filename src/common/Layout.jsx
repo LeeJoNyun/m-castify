@@ -6,12 +6,6 @@ import Footer from './footer/Footer';
 const Layout = () => {
     return (
         <div className="wrap">
-            {/* <Header /> */}
-            <main className="main">
-                <Outlet />
-            </main>
-            {/* <Footer /> */}
-
             <Header />
             <main className="main">
                 <Outlet />
