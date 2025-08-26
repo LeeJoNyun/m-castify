@@ -1,0 +1,17 @@
+import { createSlice } from '@reduxjs/toolkit';
+const initialState = {
+    menuState: false,
+};
+
+const headerSlice = createSlice({
+    name: 'header',
+    initialState,
+    reducers: {
+        setMenuState: (state, action) => {
+            state.menuState = !state.menuState;
+        },
+    },
+});
+
+export const headerActions = headerSlice.actions;
+export default headerSlice.reducer;
