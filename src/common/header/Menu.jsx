@@ -1,6 +1,15 @@
+import { useNavigate } from 'react-router-dom';
 import { MenuStyle } from './style';
+import { headerActions } from '../../store/modules/headerSlice';
+import { useDispatch } from 'react-redux';
 
 const Menu = () => {
+    const navigate = useNavigate();
+    const dispatch = useDispatch();
+    const navigatePage = (target) => {
+        dispatch(headerActions.clickMenu());
+        navigate(target);
+    };
     return (
         <MenuStyle>
             <ul className="inner">
@@ -28,7 +37,12 @@ const Menu = () => {
                 <li className="menu2">
                     <h3 className="title">K-Content Lineup</h3>
                     <div className="link-area">
-                        <div className="area sports">
+                        <div
+                            className="area sports"
+                            onClick={() => {
+                                navigatePage('/ksports');
+                            }}
+                        >
                             <span>K - Sports</span>
                         </div>
                         <div className="area content">
@@ -40,7 +54,11 @@ const Menu = () => {
                     </div>
                 </li>
                 <li className="menu3">
-                    <div>
+                    <div
+                        onClick={() => {
+                            navigatePage('/colab');
+                        }}
+                    >
                         <span>Co-Lab</span>
                     </div>
                 </li>

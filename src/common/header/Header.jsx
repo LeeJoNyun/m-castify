@@ -5,15 +5,21 @@ import { headerActions } from '../../store/modules/headerSlice';
 import { useEffect, useState } from 'react';
 import Login from '../../components/auth/Login';
 import Join from '../../components/auth/Join';
+import { useNavigate } from 'react-router-dom';
 
 const Header = () => {
     const { menuState, loginPopup, joinPopup } = useSelector((state) => state.header);
-
+    const navigate = useNavigate();
     const dispatch = useDispatch();
     const clickGnb = () => {
         dispatch(headerActions.setMenuState());
     };
-
+    const clickLogo = () => {
+        if (menuState) {
+            dispatch(headerActions.closeMenu());
+        }
+        navigate('/');
+    };
     useEffect(() => {
         if (menuState) {
             document.body.style.overflow = 'hidden';
@@ -44,7 +50,7 @@ const Header = () => {
                         </svg>
                     </i>
 
-                    <h2 className="logo">
+                    <h2 className="logo" onClick={clickLogo}>
                         <img src="/logo.png" alt="" />
                     </h2>
                     <i

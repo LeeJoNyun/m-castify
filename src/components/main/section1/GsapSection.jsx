@@ -2,9 +2,11 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
 import { useEffect, useRef } from 'react';
 import { ItemListStyle } from './style';
+import { useNavigate } from 'react-router-dom';
 
 const GsapSection = () => {
     const containerRef = useRef(null);
+    const navigate = useNavigate();
 
     gsap.registerPlugin(ScrollTrigger);
     useEffect(() => {
@@ -49,7 +51,12 @@ const GsapSection = () => {
             <li className="circle">
                 <img className="gsap-items" src="/images/main/section1/7.png" alt="" />
             </li>
-            <li className="circle btn">
+            <li
+                className="circle btn"
+                onClick={() => {
+                    navigate('/product');
+                }}
+            >
                 <div className="more">
                     <i>
                         <svg
