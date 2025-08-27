@@ -10,67 +10,72 @@ export const Section1Style = styled.section`
                 width: 100%;
             }
         }
-        .text {
-            position: absolute;
-            top: 16.9014vh;
+    }
+    .product-wrap {
+        transform: tran;
+        .title-text {
+            /* position: absolute; */
+            /* top: 16.9014vh; */
             color: #fff !important;
             padding: 0 9.9237vw;
             box-sizing: border-box;
             /* transform: translateY(30px); */
-            transform: translateY(7.6336vw);
+            transform: translateY(-9.6336vw);
             h2 {
                 font-weight: 700;
                 font-size: 1.25rem;
                 margin-bottom: 0;
+                text-align: left;
             }
             p {
                 font-size: 0.625rem;
                 font-weight: 600;
+                text-align: left;
             }
         }
-    }
-    .product-wrap {
-        display: flex;
-        gap: 6.1069vw;
-        justify-content: center;
-        margin-bottom: 5.3474vh;
-        transform: translateY(-5.6336vw);
-        li {
-            width: 15.2672vw;
-            .img-bg {
-                /* height: 10.7981vh; */
-                height: 23.4097vw;
-                background: #fff;
-                border-radius: 1.5267vw;
-                overflow: hidden;
-                img {
-                    width: 23.4097vw;
+        ul {
+            display: flex;
+            gap: 6.1069vw;
+            justify-content: center;
+            margin-bottom: 5.3474vh;
+            transform: translateY(-5.6336vw);
+            li {
+                width: 15.2672vw;
+                .img-bg {
+                    /* height: 10.7981vh; */
                     height: 23.4097vw;
-                    transform: translateX(-4vw);
-                }
-            }
-            .text {
-                color: #fff;
-                /* height: 2.3474vh; */
-                height: 5.0891vw;
-                font-size: 0.5rem;
-                padding: 1.4085vh 1.0178vw;
-                box-sizing: border-box;
-                text-overflow: ellipsis;
-                white-space: nowrap;
-                h4 {
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
-                    -webkit-line-clamp: 2;
-
+                    background: #fff;
+                    border-radius: 1.5267vw;
                     overflow: hidden;
-                    text-overflow: ellipsis;
-                    white-space: normal;
-
-                    margin-bottom: 0.4695vh;
+                    img {
+                        width: 23.4097vw;
+                        height: 23.4097vw;
+                        transform: translateX(-4vw);
+                    }
                 }
+                .text {
+                    color: #fff;
+                    /* height: 2.3474vh; */
+                    height: 5.0891vw;
+                    font-size: 0.5rem;
+                    padding: 1.4085vh 1.0178vw;
+                    box-sizing: border-box;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    h4 {
+                        display: -webkit-box;
+                        -webkit-box-orient: vertical;
+                        -webkit-line-clamp: 2;
 
-                span {
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: normal;
+
+                        margin-bottom: 0.4695vh;
+                    }
+
+                    span {
+                    }
                 }
             }
         }
