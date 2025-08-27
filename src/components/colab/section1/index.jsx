@@ -36,24 +36,26 @@ const Section1 = () => {
                 <div className="visual-image">
                     <img src={img} alt={title} />
                 </div>
-                <div className="text">
+            </div>
+            <div className="product-wrap">
+                <div className="title-text">
                     <h2>{title}</h2>
                     <p>{desc}</p>
                 </div>
+                <ul>
+                    {product.map((item, idx) => (
+                        <li key={idx}>
+                            <div className="img-bg">
+                                <img src={item.img} alt={item.name} />
+                            </div>
+                            <div className="text">
+                                <h4>{item.name}</h4>
+                                <span> ₩{item.price.toLocaleString()}</span>
+                            </div>
+                        </li>
+                    ))}
+                </ul>
             </div>
-            <ul className="product-wrap">
-                {product.map((item, idx) => (
-                    <li key={idx}>
-                        <div className="img-bg">
-                            <img src={item.img} alt={item.name} />
-                        </div>
-                        <div className="text">
-                            <h4>{item.name}</h4>
-                            <span> ₩{item.price.toLocaleString()}</span>
-                        </div>
-                    </li>
-                ))}
-            </ul>
             <button>VIEW MORE</button>
         </Section1Style>
     );
