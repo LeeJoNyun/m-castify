@@ -16,7 +16,12 @@ const Menu = () => {
                 <li className="menu1">
                     <h3 className="title">case</h3>
                     <div className="link-area">
-                        <div className="apple">
+                        <div
+                            className="apple"
+                            onClick={() => {
+                                navigatePage('/product');
+                            }}
+                        >
                             <span>Apple</span>
                             <img
                                 src="/images/menu/header1.png"
@@ -29,7 +34,12 @@ const Menu = () => {
                                 }}
                             />
                         </div>
-                        <div className="samsung">
+                        <div
+                            className="samsung"
+                            onClick={() => {
+                                navigatePage('/product');
+                            }}
+                        >
                             <span>Samsung</span>
                         </div>
                     </div>
